@@ -2,7 +2,7 @@
 assignment_group = "Technical Support"
 short_description = "Weekly report for Onwer"
 description = "Please find the attached weekly report for the Owner."
-integration_helper = false                                                  # Optional, default is true
+integration_helper = false
 
 [ticket.schedule]
 frequency = "daily"

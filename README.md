@@ -184,6 +184,7 @@ Below are examples of template structures:
 assignment_group = "Technical support"
 short_description = "Daily report for Owner"
 description = "Please collect the data for daily report and send the updates to the Owner."
+integration_helper = false
 
 [ticket.schedule]
 # For "daily", ticket is created every weekday (Mon-Fri).
@@ -196,6 +197,7 @@ frequency = "daily"
 assignment_group = "Technical support"
 short_description = "Weekly data quality check"
 description = "Please check the data quality for weekly report (attached) and send the updates to the Owner."
+integration_helper = true
 
 [ticket.schedule]
 frequency = "weekly"
@@ -216,6 +218,7 @@ assignment_group = "Technical support"
 short_description = "Monthly something check"
 description = """Please check something
 and send the updates to someone."""
+integration_helper = true
 
 [ticket.schedule]
 # Creates a ticket on the 15th day of every month.
@@ -235,6 +238,7 @@ files = [
 assignment_group = "Technical support"
 short_description = "Quarterly something check"
 description = "Please update servers inventory."
+integration_helper = true
 
 [ticket.schedule]
 # Creates a ticket on the 10th day of January, April, July, and October.
@@ -264,9 +268,15 @@ This is the main table containing general information for the ticket.
     A brief summary for the ticket.
 
 - `description`: `str` (Required)
-    
-    The detailed description or body content for the ticket.
 
+    The detailed body content or full description for the ticket. This field supports multi-line strings for better readability.
+
+- `integration_helper`: `bool` (Required)
+
+    A boolean flag (`true` or `false`) that determines which ServiceNow client will be used for the ticket creation process:
+
+    - `true`: The ticket will be created using the specialized "Integration Helper" client. This client might utilize custom ServiceNow API endpoints, apply specific pre-processing, or handle formatting in a particular way.
+    - `false`: The ticket will be created using the standard ServiceNow API client.
 
 #### `[ticket.schedule]`
 This table groups all parameters related to defining when the ticket should be created.
