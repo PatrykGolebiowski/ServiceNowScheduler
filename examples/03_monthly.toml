@@ -1,0 +1,15 @@
+[ticket]
+assignment_group = "Technical Support"
+short_description = "Monthly something check"
+description = "Please check something and send the updates to someone."
+integration_helper = true
+
+[ticket.schedule]
+frequency = "monthly"
+day_of_month = 15
+
+[ticket.attachments]
+files = [
+    { path = "D:\\...\\Attachment.txt", required = true },
+    { path = "D:\\...\\Attachment_1.txt", required = true }
+]

@@ -1,0 +1,11 @@
+[log]
+level = "debug"                                         # info, debug
+dir = "logs"                                            # directory
+filename_template = "ServiceNowScheduler_%Y_%m_%d.log"
+
+[servicenow]
+instance_url = "https://dev12345.service-now.com"  # ServiceNow instance URL
+integration_url = "api/aisa2/integration_helper/XXX/XXX" # API endpoint for integration
+
+[templates]
+path = ".\\resources\\*.toml"

@@ -1,0 +1,9 @@
+[project]
+name = "servicenow-ticket-scheduler"
+version = "1.0.0"
+description = "Application automates the creation of scheduled tickets"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.3",
+]

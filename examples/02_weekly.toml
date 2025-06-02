@@ -1,0 +1,15 @@
+[ticket]
+assignment_group = "Technical Support"
+short_description = "Weekly data quality check"
+description = "Please check the data quality for weekly report (attached) and send the updates to the Service Owner."
+integration_helper = false
+
+[ticket.schedule]
+frequency = "weekly"
+day_of_week = 0
+
+[ticket.attachments]
+files = [
+    { path = "D:\\...\\AAA_DQ.txt", required = true },
+    { path = "D:\\...\\BBB_DQ.txt", required = true }
+]
